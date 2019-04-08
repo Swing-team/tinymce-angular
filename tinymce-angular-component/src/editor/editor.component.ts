@@ -1,6 +1,6 @@
-import { Component, AfterViewInit, Input, ElementRef, OnDestroy, forwardRef, NgZone, Inject, PLATFORM_ID } from '@angular/core';
+https://taiga.swing.team/project/mohammad-pendulum/issues?status=44,45,46,49,50,48,58,66&page=2import { Component, AfterViewInit, Input, ElementRef, OnDestroy, forwardRef, NgZone, Inject, PLATFORM_ID } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-
+https://taiga.swing.team/project/mohammad-pendulum/issues?status=44,45,46,49,50,48,58,66&page=2
 import * as ScriptLoader from '../utils/ScriptLoader';
 import { uuid, isTextarea, bindHandlers, mergePlugins } from '../utils/Utils';
 import { getTinymce } from '../TinyMCE';
@@ -159,7 +159,7 @@ export class EditorComponent extends Events implements AfterViewInit, ControlVal
       'setcontent',
       ({ content, format }: any) => format === 'html' && content && this.ngZone.run(() => this.onChangeCallback(content))
     );
-    editor.on('change keyup undo redo', () => this.ngZone.run(() => this.onChangeCallback(editor.getContent())));
+    editor.on('change keyup undo redo', () => this.ngZone.run(() => this.onChangeCallback(editor.getContent({format: 'raw'https://taiga.swing.team/project/mohammad-pendulum/issues?status=44,45,46,49,50,48,58,66&page=2}))));
     bindHandlers(this, editor, initEvent);
   }
 }
